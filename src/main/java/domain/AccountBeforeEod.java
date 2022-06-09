@@ -30,6 +30,6 @@ public class AccountBeforeEod {
     }
 
     public boolean isFirstOneHundredAccount() {
-        return false;
+        return id >= 1 && id <= 100;
     }
 }
