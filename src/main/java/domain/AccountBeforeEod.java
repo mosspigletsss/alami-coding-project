@@ -22,7 +22,7 @@ public class AccountBeforeEod {
     }
 
     public boolean isFreeTransferEligible() {
-        return false;
+        return balanced.compareTo(100.0) >= 0 && balanced.compareTo(150.0) <= 0;
     }
 
     public boolean isBonusBalancedEligible() {
