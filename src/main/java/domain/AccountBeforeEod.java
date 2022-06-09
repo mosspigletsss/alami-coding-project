@@ -26,7 +26,7 @@ public class AccountBeforeEod {
     }
 
     public boolean isBonusBalancedEligible() {
-        return false;
+        return balanced.compareTo(150.0) > 0;
     }
 
     public boolean isFirstOneHundredAccount() {
