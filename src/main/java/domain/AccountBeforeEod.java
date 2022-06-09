@@ -18,7 +18,7 @@ public class AccountBeforeEod {
     }
 
     public Double countAverageBalanced() {
-        return null;
+        return (this.balanced + this.previousBalanced) / 2;
     }
 
     public boolean isFreeTransferEligible() {
