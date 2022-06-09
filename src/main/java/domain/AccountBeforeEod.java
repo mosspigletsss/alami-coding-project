@@ -1,21 +1,16 @@
 package domain;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class AccountBeforeEod {
+    @CsvBindByName(column = "id")
     private Integer id;
+
+    @CsvBindByName(column = "Balanced")
     private Double balanced;
+
+    @CsvBindByName(column = "Previous Balanced")
     private Double previousBalanced;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setBalanced(Double balanced) {
-        this.balanced = balanced;
-    }
-
-    public void setPreviousBalanced(Double previousBalanced) {
-        this.previousBalanced = previousBalanced;
-    }
 
     public Double countAverageBalanced() {
         return (this.balanced + this.previousBalanced) / 2;
@@ -31,5 +26,14 @@ public class AccountBeforeEod {
 
     public boolean isFirstOneHundredAccount() {
         return id >= 1 && id <= 100;
+    }
+
+    @Override
+    public String toString() {
+        return "AccountBeforeEod{" +
+                "id=" + id +
+                ", balanced=" + balanced +
+                ", previousBalanced=" + previousBalanced +
+                '}';
     }
 }
