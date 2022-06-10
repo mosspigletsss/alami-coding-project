@@ -1,41 +1,41 @@
 package domain;
 
-import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 public class AccountAfterEod {
 
-    @CsvBindByName(column = "id")
+    @CsvBindByPosition(position = 0)
     private Integer id;
 
-    @CsvBindByName(column = "Nama")
+    @CsvBindByPosition(position = 1)
     private String nama;
 
-    @CsvBindByName(column = "Age")
+    @CsvBindByPosition(position = 2)
     private Integer age;
 
-    @CsvBindByName(column = "Balanced")
+    @CsvBindByPosition(position = 3)
     private Double balanced;
 
-    @CsvBindByName(column = "No 2b Thread-No")
-    private Integer thread2b;
+    @CsvBindByPosition(position = 4)
+    private Long thread2b;
 
-    @CsvBindByName(column = "No 3 Thread-No")
-    private Integer thread3;
+    @CsvBindByPosition(position = 5)
+    private Long thread3;
 
-    @CsvBindByName(column = "Previous Balanced")
+    @CsvBindByPosition(position = 6)
     private Double previousBalanced;
 
-    @CsvBindByName(column = "Average Balanced")
+    @CsvBindByPosition(position = 7)
     private Double averageBalanced;
 
-    @CsvBindByName(column = "No 1 Thread-No")
-    private Integer thread1;
+    @CsvBindByPosition(position = 8)
+    private Long thread1;
 
-    @CsvBindByName(column = "Free Transfer")
+    @CsvBindByPosition(position = 9)
     private Integer freeTransfer;
 
-    @CsvBindByName(column = "No 2a Thread-No")
-    private Integer thread2a;
+    @CsvBindByPosition(position = 10)
+    private Long thread2a;
 
     public void setAverageBalanced(Double averageBalanced) {
         this.averageBalanced = averageBalanced;
@@ -45,27 +45,23 @@ public class AccountAfterEod {
         this.balanced = balanced;
     }
 
-    public Double getBalanced() {
-        return balanced;
-    }
-
     public void setFreeTransfer(Integer freeTransfer) {
         this.freeTransfer = freeTransfer;
     }
 
-    public void setThread1(Integer thread1) {
+    public void setThread1(Long thread1) {
         this.thread1 = thread1;
     }
 
-    public void setThread2a(Integer thread2a) {
+    public void setThread2a(Long thread2a) {
         this.thread2a = thread2a;
     }
 
-    public void setThread2b(Integer thread2b) {
+    public void setThread2b(Long thread2b) {
         this.thread2b = thread2b;
     }
 
-    public void setThread3(Integer thread3) {
+    public void setThread3(Long thread3) {
         this.thread3 = thread3;
     }
 
