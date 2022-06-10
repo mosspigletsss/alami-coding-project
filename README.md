@@ -12,6 +12,8 @@
 2. Pastikan JDK yang digunakan >= 8
 3. Pastikan Gradle yang digunakan > 4.9
 
+Note: Data csv terdapat di folder `alami-coding-project/src/main/resources/`
+
 ### Unit Test
 ``./gradlew test``
 
